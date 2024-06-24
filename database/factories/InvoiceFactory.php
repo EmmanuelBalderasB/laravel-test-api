@@ -11,7 +11,7 @@ use Illuminate\Support\Str;
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\User>
  */
-class CustomerFactory extends Factory
+class InvoiceFactory extends Factory
 {
     /**
      * The current password being used by the factory.
@@ -29,7 +29,7 @@ class CustomerFactory extends Factory
 
         return [
             'customer_id' => Customer::factory(),
-            'amount' => $this->faker->randomBetween(100, 20000),
+            'amount' => $this->faker->numberBetween(100, 20000),
             'status' =>  $status,
             'billed_at' => $this->faker->dateTimeThisDecade(),
             'paid_at' => $status === 'P' ? $this->faker->dateTimeThisDecade() : null,
