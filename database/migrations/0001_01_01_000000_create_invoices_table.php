@@ -13,6 +13,7 @@ return new class extends Migration {
             $table->integer('amount');
             $table->string('status'); // Billed, Paid, Void
             $table->dateTime('paid_at')->nullable();
+            $table->dateTime('billed_at')->nullable();
             $table->timestamps();
         });
     }
