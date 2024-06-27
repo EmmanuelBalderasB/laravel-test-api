@@ -1,6 +1,6 @@
 import "./bootstrap";
 
-async function fetchCustomers() {
+async function fetchAllCustomers() {
     const tableBody = document.getElementById("tbody");
     axios.get("http://localhost:8000/api/v1/customers").then((response) => {
         console.log("data: ", response.data.data);
@@ -23,4 +23,4 @@ async function fetchCustomers() {
     });
 }
 
-fetchCustomers();
+fetchAllCustomers();
