@@ -14,35 +14,37 @@
     <div id="container"
         class="w-10/12 lg:w-4/6 xl:w-fit h-3/4 bg-opacity-25 bg-white shadow-md rounded-lg px-6 py-4 overflow-x-auto scroll-p-4">
 
-        <p class="text-lg text-white w-fit bg-black rounded-xl px-3 py-2 mb-6">Dashboard</p>
+        <p class="text-lg text-white w-fit  bg-black rounded-xl px-3 py-2 mb-6">Dashboard</p>
 
         <!-- Search Form -->
 
-        <form action="" method="get" class="flex flex-row bg-white border rounded-xl w-fit px-4 mb-4 divide-x-2">
-            <!-- ID -->
-            <div class="flex flex-col text-start px-2 bg-white">
+        <form action="" method="get" id="searchForm" class="flex flex-col items-center border rounded-xl w-fit px-4 mb-4">
+            <div id="inputFields" class="flex bg-white flex-row divide-x-2 rounded-xl">
+                <!-- ID -->
+            <div class="flex flex-col text-start bg-white rounded-l-xl w-fit px-4 divide-x-2">
                 <label for="searchId">ID</label>
                 <input type="text" name="searchId" id="searchId"
-                    class=" bg-white px-2 py-1 w-auto active:border-none" placeholder="e.g. 123"
+                    class=" bg-white px-2 py-1 w-24 active:border-white" placeholder="e.g. 123"
                     type="phone">
             </div>
             <!-- Name -->
             <div class="flex flex-col  text-start px-2 bg-white">
                 <label for="searchName">Name</label>
                 <input type="text" name="searchName" id="searchName"
-                    class="bg-white px-2 py-1 w-auto active:border-none" placeholder="Jane Doe" type="text">
+                    class="bg-white px-2 py-1 w-auto active:border-white" placeholder="Jane Doe" type="text">
             </div>
             <!-- Email -->
             <div class="flex flex-col  text-start px-2 bg-white">
                 <label for="searchEmail">Email</label>
                 <input type="text" name="searchEmail" id="searchEmail"
-                    class=" bg-white px-2 py-1 w-auto active:border-none" placeholder="example@example.com"
+                    class=" bg-white px-2 py-1 w-auto active:border-white" placeholder="example@example.com"
                     type="email">
             </div>
            <!-- STATES -->
             <div class="flex flex-col text-start bg-white px-2">
                 <label for="searchState">State</label>
                 <select name="searchState" id="searchState" class="bg-white">
+                    <option value="any">Any</option>
                     <option value="AL">Alabama</option>
                     <option value="AK">Alaska</option>
                     <option value="AZ">Arizona</option>
@@ -99,20 +101,21 @@
             <div class="flex flex-col  text-start bg-white px-2">
                 <label for="searchZipCode">Zip Code</label>
                 <input type="text" name="searchZipCode" id="searchZipCode"
-                    class="bg-white px-2 py-1 w-auto active:border-none" placeholder="e.g. 12345"
+                    class="bg-white px-2 py-1 w-auto active:border-white" placeholder="e.g. 12345"
                     type="text">
             </div>
             <!-- By Type -->
-             <div class="flex flex-col text-start bg-white px-2">
+             <div class="flex flex-col text-start bg-white px-2 rounded-r-xl">
                 <label for="searchType">Type</label>
                 <select name="searchType" id="searchType"
                     class=" px-2 py-1 bg-white">
-                    <option value="all">All</option>
+                    <option value="any">Any</option>
                     <option value="individual">Individual</option>
                     <option value="business">Business</option>
                 </select>
             </div>
-            
+        </div>
+        <button type="submit" class="bg-black w-32 mt-4 text-white px-4 py-2 rounded-xl hover:bg-white hover:text-black " id="searchButton">Search</button>    
         </form>
         <table class="bg-white table-auto bg-opacity-85 border-black divide-x-2 min-w-full px-2">
             <thead>
