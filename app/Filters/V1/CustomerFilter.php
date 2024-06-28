@@ -10,7 +10,7 @@ class CustomerFilter extends ApiFilter {
         'name' => ['eq'],
         'type' => ['eq'],
         'email' => ['eq'],
-        'email' => ['eq'],
+        'id' => ['eq', 'gt', 'lt'],
         'address' => ['eq'],
         'city' => ['eq'],
         'state' => ['eq'],
