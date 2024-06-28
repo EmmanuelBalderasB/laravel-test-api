@@ -96,7 +96,6 @@ function fetchCustomQuery(e) {
     }
     console.log(query);
     axios.get(query).then((response) => {
-        console.log("data: ", response.data.data);
         const tableBody = document.getElementById("tbody");
         tableBody.innerHTML = "";
         for (const customer of response.data.data) {
@@ -116,5 +115,6 @@ function fetchCustomQuery(e) {
             tableBody.appendChild(tr);
         }
     });
+    searchButton.className = "hidden";
 }
 form.addEventListener("change", fetchCustomQuery);
